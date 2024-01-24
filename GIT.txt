@@ -1,0 +1,114 @@
+Git notes:
+========
+GIT(Global Information Tracker)
+->git is a version control system(VCS) means it will maintain the source code for each version    (OR) sorce code management tool
+
+what is git?
+=========
+->git is used to track the files
+->it will maintain the multiple versions of the same file
+->it is platform -independent
+->it is free and open source
+->it can handle larger projects efficiently
+
+Architecture of git:
+==============
+Stages :
+    1.Working Directory:where we write our source code
+   2.Staging Area:we track files here
+   3.Repository:where we store tracked source code
+
+working with the git
+=================
+  1.create a ec2 instance
+  2.create a directory by using mkdir <dir-name>
+ 3.change to the creating directory
+     $ cd  <dir-name>
+ 4.to install the git use the below command
+         $  yum  install  git   -y      [yum=package manager,install=action,git=pkg name  -y=yes]
+5.to check the version of the git
+       $  git  -v
+=================================================
+$ git config --global user.email "youremail@yourdomain.com"
+
+$ git config --global user.name "name"
+
+Note: email and name we will configure only for first time.
+
+$ git init : To initialize our folder as git working tree folder
+
+$ git add: to send our file to working directory to staging area
+                    syntax:  git add <file-name>
+                                        (or )
+                                  git  add .   (to send all the files to staging area) 
+
+$ git status: to check the status of the file (means tracked or untracked)
+
+$ git commit : It is used to commit staged files to git local repository
+
+		Syntax :  git commit -m 'reason for commit'
+
+$ git log :to show the list of commit history
+
+      ->to show the last commit hystory
+                                            git  log -2
+                                
+ $ git show:used to show the files which are attached to commits
+                 git  log   --oneline
+                syntax: git show <commit-id>
+
+$ git restore --staged <file-name>:to untrack the tracked files
+
+Branches:
+========
+it is a individual line of development
+developers write the code on branches.
+intially branches we create on git
+after write source code on git we push to github.
+
+Note:
+=====
+ default branch is master/main
+when we do a intial commit the default branch will be created
+
+Dev-->Git(Movies branch)-->code-->github
+
+working with the branches:
+=====================
+1.to  list  the  all branches
+          $ git  branch 
+
+2.to create the new branch
+         $ git branch <branch-name> 
+
+3.to switch between the branches
+        $ git  checkout <switching-branch-name> 
+                   (or)
+  to create and switch branch at same time
+                $ git  checkout  -b  <new branch name>
+
+
+4.to clone the code from specific branch
+     $  git  clone  -b  <branch-name>  <repo-url> 
+
+5.to re-name the branch
+      $ git branch -m <old-branch>  <new -branch>
+
+push the code to github:
+==================
+1.create a repository in github
+
+2.copy the url to send the code to to the remote repo
+     ex:git remote add origin http://github.com/venkat4-sys/paytm.git
+
+3.push:to send files from our git to github
+
+        $ git push origin <branch-name>
+
+ex:  git push origin movies
+
+steps to generate the token:
+=======================
+account-->settings-->developer settings-->personal acess token-->classic-->Generate new token-->classic -->name of the token -->select   6 options
+
+token will be visible once
