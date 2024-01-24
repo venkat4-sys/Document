@@ -112,3 +112,26 @@ steps to generate the token:
 account-->settings-->developer settings-->personal acess token-->classic-->Generate new token-->classic -->name of the token -->select   6 options
 
 token will be visible once
+
+Branch merging in the github:
+======================
+->when we create git repository in Git hub we will get master branch by default
+->To support parallel development we need to have branches in git repository
+-->Generally in realtime we will create several branches like below
+  master
+  develop
+  feature
+ QA
+  UAT
+ release
+->in GIT Hub account we can create branches in repository
+ -->Clone the branch from the repository
+-->Make changes and push your changes to branch which we created for your feature
+-->Once your development & Unit testing is complete then merge your changes to main branch
+-->to merge changes from one branch to another branch we will create 'Pull Request'
+->when we execute pull request,GIT Hub compare source branch and Target branch and it will confirm can we merge these branches or not
+->if status is 'Able to merge' then execute pull request and merge changes
+-->After pull request execution got completed,we can delete that new branch which we created for our story
+
+
+
