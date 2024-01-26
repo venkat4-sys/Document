@@ -1,0 +1,14 @@
+Steps to add swagger documentation to RestApI:
+====================================
+
+--> To integrate swagger documentation to our restapi use the following dependency in your pom.xml
+
+            <dependency>
+                   <groupId>org.springdoc</groupId>
+                   <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                   <version>2.3.0</version>
+           </dependency>
+
+-->run your spring-boot application and type the below url in the browser
+
+  localhost:8080/swagger-ui/index.html
